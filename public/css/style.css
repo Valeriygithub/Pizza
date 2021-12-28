@@ -1,0 +1,546 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+body {
+    font-family: sans-serif;
+}
+
+body > div:first-child {
+    display: none!important;
+ }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: sans-serif !important;
+}
+
+/* Start admin */
+.admin-panel-btn {
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 8px #222;
+    border-radius: 7px;
+}
+
+.form-come {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-come>div {
+    padding-bottom: 20px;
+}
+
+.creat_box {
+    margin: 50px auto;
+    box-shadow: 1px 1px 8px #212529;
+    padding: 40px 25px;
+}
+
+.admin_product_image {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.admin_card_index {
+    box-shadow: 1px 1px 8px #212529;
+    margin: 10px 0;
+    height: 400px;
+}
+
+.admin_btn {
+    background: #222;
+    color: #fff;
+    padding: 8 px;
+}
+
+.my_link_btn {
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin_form {
+    box-shadow: 1px 1px 8px #222;
+    padding: 20px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.admin-image {
+    height: 40px;
+}
+
+.admin-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-product>h2 {
+    margin-top: 0;
+}
+
+.admin-descript-card {
+    text-align: center;
+}
+
+/* End admin */
+
+/* ------------- Card Show -------------- */
+.image_card {
+    width: 300px;
+    height: 200px;
+}
+
+.card {
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    box-shadow: 1px 1px 8px #222;
+    padding: 20px;
+}
+
+.card_grid_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.show_image {
+    max-width: 340px;
+}
+
+.card_title {
+    margin-top: 40px;
+    color: red;
+}
+
+.show_description {
+    color: #212529;
+    text-align: start;
+    ;
+}
+
+.new_price {
+    color: red;
+    margin-bottom: 30px;
+    animation: bounce-top .9s both;
+}
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in;
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    40% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in
+    }
+
+    65% {
+        transform: translateY(-5px);
+        animation-timing-function: ease-in
+    }
+
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in
+    }
+
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0);
+        animation-timing-function: ease-out
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1
+    }
+}
+
+/* ==================================================================================================================================================== */
+.btn-fack {
+    animation: wobble-ver-right .7s both;
+    background-color: red;
+    color: #fff;
+}
+
+@keyframes wobble-ver-right {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+        transform-origin: 50% 50%
+    }
+
+    15% {
+        transform: translateY(-30px) rotate(6deg)
+    }
+
+    30% {
+        transform: translateY(15px) rotate(-6deg)
+    }
+
+    45% {
+        transform: translateY(-15px) rotate(3.6deg)
+    }
+
+    60% {
+        transform: translateY(9px) rotate(-2.4deg)
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(1.2deg)
+    }
+}
+
+/* ==================================================================================================================================================== */
+
+
+/* -------------End Card Show -------------- */
+
+/* -------------Start Edit -------------- */
+.edit_form_box {
+    box-shadow: 1px 1px 8px #222;
+    padding: 20px;
+    width: 100%;
+}
+
+.my_container_edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.my_btn_edit {
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+}
+
+.edit_btn {
+    background-color: #212529;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px 5px;
+}
+
+.admin-btn {
+    margin: 20px auto;
+    width: 100%;
+    height: 40px;
+}
+
+.box-admin-price {
+    display: flex;
+}
+
+.box-admin-price>h3 {
+    margin-right: 20px;
+}
+
+/* -------------End Edit -------------- */
+
+
+/* -----------start Cart------ */
+.cart-box-order {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 8px red;
+    padding: 20px 15px;
+    width: 90%;
+}
+
+.cart-media-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-title {
+    text-transform: uppercase;
+}
+
+.cart_span {
+    color: #fff;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: red;
+    border-radius: 50%;
+    margin-left: -3px;
+    padding-left: 7px;
+}
+/* .link-cart-span {
+    color: #fff;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: red;
+    border-radius: 50%;
+    padding-left: 3px;
+} */
+
+.box_cart_clear {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.cart-box-text {
+    margin-left: 50px;
+}
+
+.card-description {
+    text-align: left;
+}
+
+.box-quantity-cart {
+    display: flex;
+    padding: 10px;
+}
+
+
+/* ----------- END Cart------ */
+
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(-45px);
+        animation-timing-function: ease-in;
+        opacity: 1
+    }
+
+    24% {
+        opacity: 1
+    }
+
+    40% {
+        transform: translateY(-24px);
+        animation-timing-function: ease-in
+    }
+
+    65% {
+        transform: translateY(-12px);
+        animation-timing-function: ease-in
+    }
+
+    82% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in
+    }
+
+    93% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        transform: translateY(0);
+        animation-timing-function: ease-out
+    }
+
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1
+    }
+
+}
+
+
+.box-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.fixed-box-nav {
+    max-width: 100%;
+    background: #212529;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+/* =============footer=========================== */
+.my-footer {
+    background-color: #212529 !important;
+    padding-top: 10px;
+}
+
+.linc-footer {
+    padding: 0 !important;
+    margin: 3px 0;
+
+}
+
+.nav-footer {
+    text-decoration: none;
+    color: #6c757d;
+    transition: all 280ms ease;
+}
+
+.nav-footer:hover {
+    text-decoration: none;
+    text-decoration: revert;
+    color: yellowgreen;
+    transform: translate(3px);
+}
+
+/* ============= Nav header=========================== */
+.nav-phone {
+    text-decoration: none;
+    color: #6c757d;
+    padding-right: 40px;
+    transition: all 280ms ease;
+}
+
+.nav-phone:hover {
+    text-decoration: none;
+    text-decoration: revert;
+    color: yellowgreen;
+    transform: translate(3px);
+}
+
+.nav-link {
+    transition: all 280ms ease;
+}
+
+.nav-link:hover {
+    text-decoration: revert;
+    color: yellowgreen !important;
+    transform: translate(3px);
+}
+
+.nav-image-phone {
+    margin-right: 10px;
+}
+
+.nav-image-phone:hover {
+    margin-right: 10px;
+    animation: shake-horizontal 1s cubic-bezier(.455, .03, .515, .955) both;
+}
+
+@keyframes shake-horizontal {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-3px)
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(3px)
+    }
+
+    80% {
+        transform: translateX(3px)
+    }
+
+    90% {
+        transform: translateX(-3px)
+    }
+}
+
+.card {
+    height: 540px;
+}
+
+.about-us {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 8;
+}
+
+/* =================Start table ======================= */
+th,
+td,
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+}
+
+td>p {
+    margin: 0;
+    padding: 0;
+}
+
+/* =================End table ======================= */
+
+/* =================End order ======================= */
+
+.form-order {
+    margin: 20px 0;
+}
+
+.order-input {
+    border: none;
+    border-bottom: 1px solid #222;
+    border-radius: 0;
+}
+
+/* =================End Contact ======================= */
+
+.contact-flex-box {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.phones-box {
+    display: flex;
+    flex-direction: column;
+}
+.phone {
+    text-decoration: none;
+    color: #212529;
+}
