@@ -7,10 +7,10 @@ body {
     font-family: sans-serif;
 }
 
-body > div:first-child {
+/* body > div:first-child {
     display: none!important;
  }
-
+ */
 h1,
 h2,
 h3,
