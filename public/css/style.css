@@ -7,10 +7,14 @@ body {
     font-family: sans-serif;
 }
 
-/* body > div:first-child {
+/*
+Для сокрытия лишнего дива который находился на сайте из-за пробного периода хостинга
+
+body > div:first-child {
     display: none!important;
  }
  */
+
 h1,
 h2,
 h3,
