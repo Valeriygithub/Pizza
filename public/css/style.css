@@ -7,13 +7,6 @@ body {
     font-family: sans-serif;
 }
 
-/*
-Для сокрытия лишнего дива который находился на сайте из-за пробного периода хостинга
-
-body > div:first-child {
-    display: none!important;
- }
- */
 
 h1,
 h2,
@@ -23,6 +16,11 @@ h5,
 h6,
 p {
     font-family: sans-serif !important;
+}
+/*MAIN*/
+main {
+    padding-top: 100px; 
+    min-height: 50vh;
 }
 
 /* Start admin */
@@ -110,7 +108,7 @@ p {
 .card {
     margin: 20px;
     width: 300px;
-    height: auto !important;
+    min-height: 550px;
     box-shadow: 1px 1px 8px #222;
     padding: 20px;
 }
@@ -308,6 +306,11 @@ p {
     margin-left: -3px;
     padding-left: 7px;
 }
+
+
+/* .card {
+    height: auto;
+} */
 /* .link-cart-span {
     color: #fff;
     position: absolute;
@@ -493,6 +496,11 @@ p {
         transform: translateX(-3px)
     }
 }
+
+.card {
+    height: auto;
+}
+
 .about-us {
     text-align: center;
     margin-top: 50px;
