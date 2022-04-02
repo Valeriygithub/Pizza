@@ -49,11 +49,11 @@ class CartController extends Controller
 
         
         \Cart::session($sessionId)->update($request->get("id"), [
-            'id' => $product->id, // ! передал id  в надежде что будет понимать что нажимаю
+            'id' => $product->id,
             'quantity' => -1,
         ]);
         $sum = \Cart::session($sessionId)->getTotal('new_price');
-        $cartTotalQuantity = \Cart::session($sessionId)->getTotalQuantity() ; // если не отнимать 1 отстает на 1
+        $cartTotalQuantity = \Cart::session($sessionId)->getTotalQuantity();
         return response()->json(['quantity' => -1, 'totalCount' => $sum, 'cart' => $cart, 'totalQuantity' => $cartTotalQuantity]);
     }
 
