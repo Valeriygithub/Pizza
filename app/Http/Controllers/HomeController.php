@@ -16,16 +16,15 @@ class HomeController extends Controller
     {
 
         $product = Product::all();
-        // !-------------------Сессия--------------------------------
+        // !---Сессия----
         $sessionId = Session::getId();
         \Cart::session($sessionId);
         $cart = \Cart::getContent();
-        // !-------------------Сессия--------------------------------
-
+        // !---Сессия---
+        
         return view("home.index", [
             "product" => $product,
             'cart' => $cart,
-            // 'sum' => $sum,
         ]);
     }
 
@@ -35,7 +34,7 @@ class HomeController extends Controller
         return view("home.create", ["product" => $product]);
     }
 
-    // ------------------------------------------ Store -----------------------------------------------------------
+    // -- Store ---
 
     public function store(Request $request)
     {
@@ -65,8 +64,7 @@ class HomeController extends Controller
             ->with("message", "New block " . $product->id . " has been add completed!!!");
     }
 
-    // ----------------- Show ----------------------
-
+    // -- Show --
 
     public function show($id)
     {
@@ -74,8 +72,7 @@ class HomeController extends Controller
         return view("home.show", ['product' => $product]);
     }
 
-
-    // ---------------------------------- EDITE -----------------------------
+    // --EDITE --
 
     public function edit($id)
     {
@@ -106,7 +103,7 @@ class HomeController extends Controller
             ->with("message", "Product " . $product->id . " has been update completed!!!");
     }
 
-    // ---------------------------------- DELETE  работает-----------------------------
+    // --DELETE--
     public function destroy($id)
     {
         $product = Product::query()->where("id", $id)->first();
@@ -122,15 +119,12 @@ class HomeController extends Controller
     }
 
 
-    // ------------------ Второй метод ----------------------
+    // --Второй метод --
     public function addCart(Request $request)
     {
         $sessionId = Session::getId();
         $product = Product::query()->where(['id' => $request->id])->first();
         $cart = \Cart::getContent();
-        
-        // $summedPrice  =  \Cart::get($sessionId)->getPriceSum();  // попробовать
-        
         $cartTotalQuantity = \Cart::session($sessionId)->getTotalQuantity() + 1; // Количество (добывил +1 чтоб не отставалло от реальной цифры) но тогда тоже тупит
         $qty = 1;
         
@@ -153,10 +147,8 @@ class HomeController extends Controller
             'totalCount' => $sum,
             'totalQuantity' => $cartTotalQuantity,
             'cart' => $cart,
-            // 'cartTotalQuantity' => $cartTotalQuantity
         ]);
     }
-
 
     public function contact()
     {
