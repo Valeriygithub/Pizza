@@ -134,7 +134,7 @@ class AdminController extends Controller
         return redirect()->action("\App\Http\Controllers\AdminController@index")
             ->with("message", "Product " . $product->id . " has been update completed!!!");
     }
-    // ---------------------------------- DELETE  работает-----------------------------
+    // ---------------------------------- DELETE-----------------------------
     public function destroy($id)
     {
         $product = Product::query()->where("id", $id)->first();
